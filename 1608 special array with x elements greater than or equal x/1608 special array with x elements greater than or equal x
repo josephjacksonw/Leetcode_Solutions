@@ -1,0 +1,21 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var specialArray = function(nums) {
+    for (i = 0; i <= nums.length; i++) {
+        count = 0
+        for (x = 0; x < nums.length; x++) {
+            if (nums[x] >= i) {
+                count ++
+                if (count > i) {
+                    x = nums.length
+                }
+            }
+        }
+        if (i == count) {
+                return count
+            }
+    }
+    return -1
+};
